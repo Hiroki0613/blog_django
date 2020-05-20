@@ -1,3 +1,7 @@
+{% load static %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +20,7 @@
 
 <!-- Site Icons -->
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -49,7 +53,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <img class="img-fluid" src="images/logo.png" alt="" />
+                <img class="img-fluid" src="{% static 'img/logo.png' %}" alt="" />
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -615,7 +619,7 @@
     <div class="copyrights">
         <div class="container">
             <div class="footer-distributed">
-                <a href="#"><img src="images/logo.png" alt="" /></a>
+                <a href="#"><img src="{static 'img/logo.png' %}" alt="" /></a>
                 <div class="footer-center">
                     <p class="footer-links">
                         <a href="#">Home</a>

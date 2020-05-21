@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block blog %}
+<form action='' method="POST">
+    {% csrf_token %}
+    {{ form.title }}
+    <br>
+    {{ form.memo }}
+    <br>
+    {{ form.duedate }}
+    <input type="submit" value="更新">
+</form>
+{% endblock blog %}

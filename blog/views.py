@@ -1,5 +1,6 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView
 from .models import BlogModel
+from django.urls import reverse_lazy
 
 
 class BlogListView(ListView):
@@ -10,3 +11,10 @@ class BlogListView(ListView):
 class BlogDetailView(DetailView):
     model = BlogModel
     template_name = "blog/detail.html"
+
+
+class BlogUpdateView(UpdateView):
+    model = BlogModel
+    template_name = "blog/update.html"
+    fields = ("title", "memo", "duedate")
+    success_url = reverse_lazy('list')

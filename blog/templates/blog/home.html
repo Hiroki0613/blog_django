@@ -1,7 +1,6 @@
 {% load static %}
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,6 +94,7 @@
     <section id="home" class="main-banner parallaxie" style="background: url('static/img/banner-01.jpg')">
         <div class="heading">
             <h1>Welcome to OnNext</h1>
+
             <h3 class="cd-headline clip is-full-width">
                 <span>Lorem Ipsum Dolor Sit Amet </span>
                 <span class="cd-words-wrapper">
@@ -116,16 +116,17 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="message-box">
-                        <h2>Welcome to OnNext</h2>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
-                            bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
-                            dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet
-                            libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue
-                            justo. </p>
-                        <p>Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero,
-                            eu bibendum risus. Phasellus et congue justo.</p>
+                        <h2>Blog</h2>
+                        <p>投稿するにはログインが必要です</p>
 
-                        <a href="#" class="sim-btn hvr-bounce-to-top"><span>Contact Us</span></a>
+                        {% for blog in object_list %}
+                        <h1><a href="#">{{ blog.title }}</a><small>written by:
+                            </small><span>{{ blog.memo }}</span></h1>
+                        </ul>
+                        <hr>
+                        {% endfor %}
+
+                        <a href="#" class="sim-btn hvr-bounce-to-top"><span>新規投稿</span></a>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 
@@ -619,7 +620,7 @@
     <div class="copyrights">
         <div class="container">
             <div class="footer-distributed">
-                <a href="#"><img src="{static 'img/logo.png' %}" alt="" /></a>
+                <a href="#"><img src="{% static 'img/logo.png' %}" alt="" /></a>
                 <div class="footer-center">
                     <p class="footer-links">
                         <a href="#">Home</a>

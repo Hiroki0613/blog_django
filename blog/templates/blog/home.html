@@ -93,7 +93,7 @@
 
     <section id="home" class="main-banner parallaxie" style="background: url('static/img/banner-01.jpg')">
         <div class="heading">
-            <h1>Welcome to OnNext</h1>
+            <h1>ここで投稿の編集が出来ます。</h1>
 
             <h3 class="cd-headline clip is-full-width">
                 <span>Lorem Ipsum Dolor Sit Amet </span>
@@ -104,8 +104,7 @@
                     <b>Graphic Design</b>
                 </span>
                 <div class="btn-ber">
-                    <a class="get_btn hvr-bounce-to-top" href="#">Get started</a>
-                    <a class="learn_btn hvr-bounce-to-top" href="#">Learn More</a>
+                    <a class="get_btn hvr-bounce-to-top" href="{% url 'create' %}">新規作成</a>
                 </div>
             </h3>
         </div>
@@ -120,7 +119,7 @@
                         <p>投稿するにはログインが必要です</p>
 
                         {% for blog in object_list %}
-                        <h1><a href="#">{{ blog.title }}</a><small>written by:
+                        <h1><a href="{% url 'detail' blog.pk %}">{{ blog.title }}</a><small>written by:
                             </small><span>{{ blog.memo }}</span></h1>
                         </ul>
                         <hr>

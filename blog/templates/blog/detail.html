@@ -13,5 +13,6 @@
         <p>中身：{{ object.memo }}</p>
         <p>期日：{{ object.duedate }}</p>
     </div>
+    <h1><a href="{% url 'update' object.pk %}">編集</a></h1>
 </div>
 {% endblock body %}

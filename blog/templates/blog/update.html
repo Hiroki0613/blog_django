@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
 
-{% block blog %}
+{% block body %}
 <form action='' method="POST">
     {% csrf_token %}
     {{ form.title }}
@@ -10,4 +10,4 @@
     {{ form.duedate }}
     <input type="submit" value="更新">
 </form>
-{% endblock blog %}
+{% endblock body %}
